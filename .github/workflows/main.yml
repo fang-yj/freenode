@@ -22,7 +22,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: sync fork
-      - uses: tgymnich/fork-sync@v1.4
+        uses: tgymnich/fork-sync@v1.4
         with: 
           token: ${{ secrets.TOKEN }}
           owner: abshare
