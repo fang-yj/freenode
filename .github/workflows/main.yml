@@ -22,19 +22,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: sync fork
-        uses: tgymnich/fork-sync@v1.4
-        with: 
-          token: ${{ secrets.TOKEN }}
-          owner: abshare/abshare.github.io
-          base: main
-          head: main
-        # run: |
-        #   git config --global user.name "fang-yj"
-        #   git config --global user.email "fang-yj@qq.com"
-        #   git config --global credential.helper store
-        #   git clone https://${{ secrets.TOKEN }}@github.com/abshare/abshare.github.io.git tmp
-        #   cd tmp
-        #   git remote add upstream https://${{ secrets.TOKEN }}@github.com/fang-yj/freenode.git
-        #   git fetch upstream
-        #   git merge upstream/main
-        #   git push origin main
+        # uses: tgymnich/fork-sync@v1.4
+        # with: 
+        #   token: ${{ secrets.TOKEN }}
+        #   owner: abshare/abshare.github.io
+        #   base: main
+        #   head: main
+        run: |
+          git config --global user.name "fang-yj"
+          git config --global user.email "fang-yj@qq.com"
+          git config --global credential.helper store
+          git clone https://github.com/abshare/abshare.github.io.git tmp
+          cd tmp
+          git remote add upstream https://${{ secrets.TOKEN }}@github.com/fang-yj/freenode.git
+          git fetch upstream
+          git merge upstream/main
+          git push origin main
